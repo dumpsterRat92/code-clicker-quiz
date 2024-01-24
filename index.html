@@ -12,12 +12,19 @@
 </head>
 <body>
 
-  <!-- Main container for the quiz -->
-  <div class="container mt-5">
-    <!-- Container for quiz questions -->
-    <div id="quiz-container">
+<!-- Main container for the quiz -->
+<div class="container mt-5">
+    <!-- Container for start button and score (hidden initially) -->
+    <div id="start-container">
+      <button class="btn btn-primary btn-lg" onclick="startQuiz()">Start Quiz</button>
+      <p id="score" class="mt-3">Score: 0</p>
+    </div>
+  
+    <!-- Container for quiz questions (hidden initially) -->
+    <div id="quiz-container" class="d-none">
       <!-- Quiz content dynamically added by JavaScript -->
     </div>
+  
     <!-- Container for quiz result (hidden initially) -->
     <div id="result-container" class="d-none">
       <!-- Result content dynamically added by JavaScript -->
