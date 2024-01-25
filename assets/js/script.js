@@ -30,48 +30,54 @@ function startQuiz() {
   startContainer.classList.add('d-none');
   quizContainer.classList.remove('d-none');
   // Show the first question and set timer for quiz completion
-  showQuestion(quizData);
+  showQuestion();
   setTimeout(showResult, 60000); // Set the quiz time limit (in milliseconds) - 1 minute in this example
 }
 
 // Function to display a quiz question
 function showQuestion() {
-    const questionData = quizData[currentQuestionIndex];
-    if (questionData) {
+  currentQuestionIndex = 0; // Reset currentQuestionIndex to 0
+  const questionData = quizData[currentQuestionIndex];
+  if (questionData) {
       // Generate HTML for question and answer options
       const optionsHtml = questionData.options.map((option, index) => {
-        return `<button class="btn btn-primary" onclick="checkAnswer(${index})">${option}</button>`;
+          return `<button class="btn btn-primary" onclick="checkAnswer(${index})">${option}</button>`;
       }).join('');
-      
+
       // Update quiz container with question and options
       quizContainer.innerHTML = `
-        <h2>${questionData.question}</h2>
-        ${optionsHtml}
-      `;
-  
+      <h2>${questionData.question}</h2>
+      ${optionsHtml}
+    `;
+
       // Display the current score
       document.getElementById('score').innerText = `Score: ${score}`;
-      
-      // Move to the next question
-      currentQuestionIndex++;
-    } else {
+  } else {
       // If all questions are answered, show the result
       showResult();
-    }
   }
+}
   
 // Function to check the selected answer and update score
 function checkAnswer(selectedIndex) {
   const questionData = quizData[currentQuestionIndex];
-  console.log(questionData)
+  var testArr = Object.values(questionData);
+
+  console.log(questionData);
   if (questionData.correctAnswer === selectedIndex) {
-    score++;
+      score++;
   }
+
+
   // Move to the next question
   currentQuestionIndex++;
-  // Show the next question or result
-  showQuestion();
-}
+    // Show the next question or result
+    if (currentQuestionIndex < quizData.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+    }
 
 // Function to display the quiz result
 function showResult() {
