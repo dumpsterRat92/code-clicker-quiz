@@ -11,7 +11,7 @@ This is a simple coding quiz with multiple-choice questions on JavaScript. Test 
 
 ## Screenshot 
 
-![alt text](https://github.com/dumpsterRat92/code-clicker-quiz/main/assets/screencapture-file-C-Users-ryour-code-index-html-2024-01-24-22_51_14.png?raw=true)
+![Screenshot](https://github.com/dumpsterRat92/code-clicker-quiz/blob/main/assets/screencapture-file-C-Users-ryour-code-index-html-2024-01-24-22_51_14.png)
 
 ## Usage
 
