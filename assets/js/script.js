@@ -1,4 +1,5 @@
 // Variables to hold quiz containers and data
+const startContainer = document.getElementById('start-container');
 const quizContainer = document.getElementById('quiz-container');
 const resultContainer = document.getElementById('result-container');
 let currentQuestionIndex = 0;
@@ -24,11 +25,13 @@ const quizData = [
     }
   ];
 
-// Function to start the quiz
+// Function to start the quiz with a timer
 function startQuiz() {
+  startContainer.classList.add('d-none');
+  quizContainer.classList.remove('d-none');
   // Show the first question and set timer for quiz completion
   showQuestion(quizData);
-  setInterval(showResult, 60000); // Set the quiz time (in milliseconds) - 1 minute in this example
+  setTimeout(showResult, 60000); // Set the quiz time limit (in milliseconds) - 1 minute in this example
 }
 
 // Function to display a quiz question
@@ -60,6 +63,7 @@ function showQuestion() {
 // Function to check the selected answer and update score
 function checkAnswer(selectedIndex) {
   const questionData = quizData[currentQuestionIndex];
+  console.log(questionData)
   if (questionData.correctAnswer === selectedIndex) {
     score++;
   }
