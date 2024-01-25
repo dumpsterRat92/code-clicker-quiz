@@ -1,4 +1,4 @@
-# Coding Quiz
+#  Code Clicker Quiz
 
 This is a simple coding quiz with multiple-choice questions on JavaScript. Test your knowledge and see how many questions you can answer correctly within the given time.
 
@@ -8,6 +8,10 @@ This is a simple coding quiz with multiple-choice questions on JavaScript. Test 
 - **Timer:** A timer is set for 1 minute. Answer questions before the time runs out.
 - **Score Tracking:** Your score is displayed as you answer questions.
 - **Result Page:** After completing the quiz, view your final score and restart the quiz if desired.
+
+## Screenshot 
+
+![alt text](https://github.com/dumpsterRat92/code-clicker-quiz/main/assets/screencapture-file-C-Users-ryour-code-index-html-2024-01-24-22_51_14.png?raw=true)
 
 ## Usage
 
@@ -19,7 +23,7 @@ This is a simple coding quiz with multiple-choice questions on JavaScript. Test 
 
 ## Quiz Configuration
 
-- Quiz questions and answer options are defined in the `quizData` array in the `quiz.js` file.
+- Quiz questions and answer options are defined in the `quizData` array in the `script.js` file.
 - Modify the quiz data to add or change questions as needed.
 
 ## Technologies Used
