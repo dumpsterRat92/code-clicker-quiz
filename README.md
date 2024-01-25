@@ -11,7 +11,7 @@ This is a simple coding quiz with multiple-choice questions on JavaScript. Test 
 
 ## Usage
 
-1. Clone the repository to your local machine. Link: 
+1. Clone the repository to your local machine. Link: https://github.com/dumpsterRat92/code-clicker-quiz.git
 2. Open the `index.html` file in a web browser.
 3. Click the "Start Quiz" button to begin.
 4. Answer each question and see your score.
@@ -30,7 +30,7 @@ This is a simple coding quiz with multiple-choice questions on JavaScript. Test 
 
 ## Author
 
-[Your Name]
+[dumpsterRat92]
 
 ## License
 
